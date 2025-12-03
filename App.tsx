@@ -9,7 +9,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <a href="/" className="flex items-center gap-2 text-brand-800 font-bold text-xl hover:text-brand-600 transition-colors">
+              <a href="https://felicidad.com.pe/rpp-uploader" className="flex items-center gap-2 text-brand-800 font-bold text-xl hover:text-brand-600 transition-colors">
                 <ShieldCheck className="w-8 h-8" />
                 <span>RPP Uploader</span>
               </a>
