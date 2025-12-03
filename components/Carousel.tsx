@@ -13,23 +13,23 @@ const Carousel: React.FC = () => {
   const slides: Slide[] = [
     {
       id: 1,
-      label: "1. Botón de publicación en CMS",
-      imageUrl: "https://picsum.photos/seed/cms1/800/450"
+      label: "1. Botón de conexión a cuenta de YouTube en CMS",
+      imageUrl: "https://f.rpp-noticias.io/2025/12/03/1818073image1jpeg.jpeg"
     },
     {
       id: 2,
       label: "2. Pantalla de Consentimiento Google",
-      imageUrl: "https://picsum.photos/seed/googleauth/800/450"
+      imageUrl: "https://f.rpp-noticias.io/2025/12/03/1818074image2jpeg.jpeg"
     },
     {
       id: 3,
-      label: "3. Formulario de Metadatos",
-      imageUrl: "https://picsum.photos/seed/metaform/800/450"
+      label: "3. Formulario para la subida de video a YouTube",
+      imageUrl: "https://f.rpp-noticias.io/2025/12/03/1818077image3jpeg.jpeg"
     },
     {
       id: 4,
-      label: "4. Confirmación de Carga Exitosa",
-      imageUrl: "https://picsum.photos/seed/success/800/450"
+      label: "4. Video subido de manera exitosa",
+      imageUrl: "https://f.rpp-noticias.io/2025/12/03/1818078image4jpeg.jpeg"
     }
   ];
 

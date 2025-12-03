@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Lock, FileVideo, ShieldAlert, ArrowRight } from 'lucide-react';
 import Carousel from '../components/Carousel';
 
@@ -80,13 +79,13 @@ const Home: React.FC = () => {
       {/* Privacy Policy Link */}
       <section className="bg-gray-50 rounded-lg p-8 text-center border border-gray-200">
         <h3 className="text-xl font-bold text-gray-800 mb-4">Cumplimiento y Privacidad</h3>
-        <Link 
-          to="/privacy-policy" 
+        <a 
+          href="https://felicidad.com.pe/rpp-uploader-politica" 
           className="inline-flex items-center gap-2 bg-brand-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-brand-700 transition-colors shadow-md hover:shadow-lg"
         >
           Ver Política de Privacidad de RPP Uploader
           <ArrowRight className="w-4 h-4" />
-        </Link>
+        </a>
       </section>
     </div>
   );
