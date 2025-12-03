@@ -1,6 +1,6 @@
 import React from 'react';
 import { ShieldCheck } from 'lucide-react';
-import Home from './pages/Home';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
@@ -50,7 +50,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 const App: React.FC = () => {
   return (
     <Layout>
-      <Home />
+      <PrivacyPolicy />
     </Layout>
   );
 };
