@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollText, Mail } from 'lucide-react';
+import { ScrollText, Mail, ShieldAlert } from 'lucide-react'; // Añadí ShieldAlert para resaltar la sección
 
 const PrivacyPolicy: React.FC = () => {
   return (
@@ -23,77 +23,73 @@ const PrivacyPolicy: React.FC = () => {
         </p>
       </section>
 
-      {/* Section 1 */}
+      {/* Section 1: Información que Recolectamos */}
       <section className="space-y-4">
         <h2 className="text-xl font-bold text-gray-800">1. Información que Recolectamos</h2>
-        <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 space-y-4">
-          <p className="text-gray-700 leading-relaxed">
-            Para operar, LA APLICACIÓN requiere una única autenticación a su cuenta de YouTube. 
-            Esta autenticación se realiza a través del protocolo OAuth 2.0 de Google.
-          </p>
-          <p className="text-gray-700 leading-relaxed">
-            LA APLICACIÓN no recolecta, procesa ni almacena información personal identificable del usuario, 
-            como nombre, apellido, dirección de correo electrónico, DNI o cualquier otro dato personal.
-          </p>
-          <p className="text-gray-700 leading-relaxed">
-            El único tipo de información que LA APLICACIÓN utiliza son los tokens de acceso proporcionados 
-            por la API de Google de YouTube. Estos tokens se utilizan exclusivamente para:
-          </p>
-          <ul className="list-disc list-inside ml-4 space-y-1 text-gray-700">
-            <li>Autenticar la cuenta de YouTube del usuario con la API.</li>
-            <li>Subir videos al canal de YouTube del usuario, según su comando.</li>
-          </ul>
-        </div>
-      </section>
-
-      {/* Section 2 */}
-      <section className="space-y-4">
-        <h2 className="text-xl font-bold text-gray-800">2. Almacenamiento y Resguardo de la Información</h2>
-        <p className="text-gray-700 leading-relaxed">
-          Los tokens de autenticación se almacenan de forma local en el dispositivo del usuario, ya que se trata 
-          de un flujo de corta duración. Estos tokens nunca son transmitidos a servidores de GRUPORPP ni de terceros.
+        <p className="text-gray-700 leading-relaxed font-semibold">
+          Para operar, LA APLICACIÓN requiere una única autenticación a su cuenta de YouTube a través del protocolo OAuth 2.0 de Google.
+        </p>
+        <p className="text-red-600 font-medium">
+          LA APLICACIÓN no recolecta, procesa ni almacena información personal identificable del usuario (nombres, correos, DNI).
         </p>
         <p className="text-gray-700 leading-relaxed">
-          LA APLICACIÓN no se hace responsable de interceptaciones ilegales, violación de los sistemas del usuario 
-          o uso indebido de la información si esta se obtiene por medios que escapan al control de LA APLICACIÓN, 
-          como el acceso no autorizado al dispositivo local del usuario.
+          Solo utilizamos los tokens de acceso proporcionados por la API de Google de YouTube exclusivamente para:
         </p>
-      </section>
-
-      {/* Section 3 */}
-      <section className="space-y-4">
-        <h2 className="text-xl font-bold text-gray-800">3. Uso de la Información</h2>
-        <p className="text-gray-700 leading-relaxed">
-          La información a la que se accede a través de la API de YouTube (es decir, los tokens de autenticación) 
-          se utiliza exclusivamente para el propósito de la LA APLICACIÓN:
-        </p>
-        <ul className="list-disc list-inside ml-4 space-y-2 text-gray-700 bg-white p-4 border-l-2 border-brand-200">
-          <li>Gestionar el acceso a su canal de YouTube.</li>
-          <li>Permitir la subida de videos al canal que el usuario ha autorizado.</li>
+        <ul className="list-disc list-inside ml-4 space-y-1 text-gray-700">
+          <li>Autenticar la cuenta de YouTube del usuario con la API.</li>
+          <li>Subir videos al canal de YouTube autorizado por el usuario.</li>
         </ul>
       </section>
 
-      {/* Section 4 */}
+      {/* NUEVA SECCIÓN: REQUISITO CRÍTICO DE GOOGLE */}
+      <section className="space-y-4 border-l-4 border-brand-500 pl-6 bg-brand-50/50 py-4 pr-4 rounded-r-lg">
+        <h2 className="text-xl font-bold text-brand-900 flex items-center gap-2">
+          <ShieldAlert className="w-5 h-5" />
+          2. Uso y Transferencia de Datos (Transparencia)
+        </h2>
+        <p className="text-gray-800 font-bold leading-relaxed">
+          RPP Uploader NO comparte, NO vende, NO transfiere ni divulga los datos obtenidos a través de las APIs de Google (incluyendo tokens de acceso) a terceros, plataformas externas, anunciantes o entidades fuera de la infraestructura necesaria para la operación (AWS Lambda).
+        </p>
+        <p className="text-gray-700 leading-relaxed italic">
+          El uso de la información recibida de las APIs de Google por parte de RPP Uploader se adhiere estrictamente a la 
+          <a 
+            href="https://developers.google.com/terms/api-services-user-data-policy" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-brand-700 underline mx-1 font-semibold"
+          >
+            Política de Datos del Usuario de los Servicios de API de Google
+          </a>, incluidos los requisitos de <strong>Uso Limitado</strong>.
+        </p>
+      </section>
+
+      {/* Section 3 (Anteriormente 2): Almacenamiento */}
+      <section className="space-y-4">
+        <h2 className="text-xl font-bold text-gray-800">3. Almacenamiento y Resguardo</h2>
+        <p className="text-gray-700 leading-relaxed">
+          Los tokens de autenticación son de corta duración. Estos tokens nunca son transmitidos a servidores de terceros. 
+          LA APLICACIÓN no se hace responsable de interceptaciones ilegales si estas se obtienen por medios que escapan 
+          al control del sistema, como el acceso no autorizado al dispositivo local del usuario.
+        </p>
+      </section>
+
+      {/* Section 4: Derechos y Modificaciones */}
       <section className="space-y-4">
         <h2 className="text-xl font-bold text-gray-800">4. Derechos de Acceso y Modificaciones</h2>
         <p className="text-gray-700 leading-relaxed">
           Dado que LA APLICACIÓN no almacena datos personales de los usuarios, no existen derechos de acceso, 
-          rectificación, cancelación u oposición aplicables.
-        </p>
-        <p className="text-gray-700 leading-relaxed">
-          LA APLICACIÓN se reserva el derecho de modificar o actualizar esta política en cualquier momento. 
-          Cualquier cambio será publicado y será responsabilidad del usuario consultarla periódicamente.
+          rectificación o cancelación aplicables. Nos reservamos el derecho de actualizar esta política para 
+          cumplir con nuevos requerimientos de seguridad.
         </p>
       </section>
 
-      {/* Section 5 */}
-      <section className="space-y-4">
+      {/* Section 5: Contacto */}
+      <section className="space-y-4 pb-10">
         <h2 className="text-xl font-bold text-gray-800">5. Contacto</h2>
         <div className="flex items-center gap-3 bg-brand-50 p-4 rounded-lg text-brand-900 border border-brand-100">
             <Mail className="w-5 h-5" />
             <p className="font-medium">
-            Si tiene alguna pregunta sobre esta Política de Privacidad, puede contactar con nosotros a través 
-            de la dirección de correo electrónico: <a href="mailto:scusi@gruporpp.com.pe" className="underline hover:text-brand-700">scusi@gruporpp.com.pe</a>.
+            Soporte: <a href="mailto:scusi@gruporpp.com.pe" className="underline hover:text-brand-700">scusi@gruporpp.com.pe</a>
             </p>
         </div>
       </section>
